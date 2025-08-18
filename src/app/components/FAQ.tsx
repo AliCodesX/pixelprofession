@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { FiChevronDown } from 'react-icons/fi'
 
 const faqs = [
 	{
@@ -23,34 +23,38 @@ export default function FAQ() {
 		<section id="faq" className="py-24 md:py-32">
 			<div className="mx-auto max-w-3xl px-6">
 				<h2 className="text-center text-3xl font-bold text-slate-100 sm:text-4xl">FAQ</h2>
-				<div className="mt-10 divide-y divide-slate-800 rounded-2xl border border-slate-800 bg-slate-900 p-6">
-					{faqs.map((item, idx) => {
-						const isOpen = open === idx
-						return (
-							<div key={item.q} className="px-2 py-3">
-								<button
-									className="flex w-full items-center justify-between text-left text-slate-100"
-									onClick={() => setOpen(isOpen ? null : idx)}
-								>
-									<span className="text-base font-medium">{item.q}</span>
-									<span className="ml-4 text-slate-400">{isOpen ? '-' : '+'}</span>
-								</button>
-								<AnimatePresence initial={false}>
-									{isOpen && (
-										<motion.p
-											initial={{ height: 0, opacity: 0 }}
-											animate={{ height: 'auto', opacity: 1 }}
-											exit={{ height: 0, opacity: 0 }}
-											transition={{ duration: 0.25 }}
-											className="overflow-hidden pt-2 text-sm leading-6 text-slate-300"
-										>
+				<div className="mt-10 rounded-2xl border border-slate-800 bg-slate-900 p-2 sm:p-4">
+					<ul className="divide-y divide-slate-800">
+						{faqs.map((item, idx) => {
+							const isOpen = open === idx
+							const panelId = `faq-panel-${idx}`
+							const btnId = `faq-btn-${idx}`
+							return (
+								<li key={item.q} className="px-2 sm:px-3">
+									<button
+										id={btnId}
+										aria-controls={panelId}
+										aria-expanded={isOpen}
+										onClick={() => setOpen(isOpen ? null : idx)}
+										className="flex w-full items-center justify-between py-4 text-left text-slate-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded-md"
+									>
+										<span className="text-base font-medium">{item.q}</span>
+										<FiChevronDown className={`shrink-0 text-xl transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
+									</button>
+									<div
+										id={panelId}
+										role="region"
+										aria-labelledby={btnId}
+										className={`grid transition-[grid-template-rows,opacity] duration-300 ease-out ${isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}
+									>
+										<div className="overflow-hidden pb-4 text-sm leading-6 text-slate-300">
 											{item.a}
-										</motion.p>
-									)}
-								</AnimatePresence>
-							</div>
-						)
-					})}
+										</div>
+									</div>
+								</li>
+							)
+						})}
+					</ul>
 				</div>
 			</div>
 		</section>

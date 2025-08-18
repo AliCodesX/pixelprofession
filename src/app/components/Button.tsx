@@ -87,7 +87,7 @@ const buttonVariants = cva(
 	}
 )
 
-type ButtonProps =
+type ButtonProps = (
 	|
 		(ComponentProps<'button'> & {
 			as?: 'button'
@@ -97,7 +97,8 @@ type ButtonProps =
 		(ComponentProps<'a'> & {
 			as: 'a'
 			href: string
-		}) & { children: ReactNode } & VariantProps<typeof buttonVariants>
+		})
+) & { children: ReactNode } & VariantProps<typeof buttonVariants>
 
 export function Button(props: ButtonProps) {
 	if (props.as === 'a') {

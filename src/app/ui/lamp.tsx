@@ -38,68 +38,75 @@ export const LampContainer = ({
   const pageBg = "bg-[#0b1220]";
 
   const containerClasses = cn(
-    // Basis ohne feste Mindesthöhe
     "relative z-0 flex w-full flex-col items-center justify-center overflow-hidden rounded-md",
-    compact ? "min-h-0 py-10" : "min-h-screen",
+    compact ? "min-h-0 py-6" : "min-h-screen",
     noBackground ? "bg-transparent rounded-none" : pageBg,
     className
   );
 
-  const lineTranslate = compact ? "-translate-y-[4.5rem]" : "-translate-y-[7rem]";
-  const glowTranslate = compact ? "-translate-y-[4rem]" : "-translate-y-[6rem]";
-  const haloSize = compact ? "h-32 w-[22rem]" : "h-36 w-[28rem]";
-  const topBlurTranslate = compact ? "translate-y-8" : "translate-y-12";
+  // Kompaktere, natürlichere Offsets
+  const lineTranslate = compact ? "-translate-y-[2.5rem]" : "-translate-y-[7rem]";
+  const glowTranslate = compact ? "-translate-y-[2rem]" : "-translate-y-[6rem]";
+  const haloSize = compact ? "h-28 w-[20rem]" : "h-36 w-[28rem]";
+  const topBlurTranslate = compact ? "translate-y-3" : "translate-y-12";
 
   return (
     <div className={containerClasses}>
       <div
         className={cn(
           "isolate z-0 relative flex w-full scale-y-125 items-center justify-center",
-          compact && "scale-y-100 h-[18rem]"
+          compact && "scale-y-100 h-[14rem]"
         )}
       >
+        {/* Links Konus: indigo -> transparent */}
         <motion.div
-          initial={{ opacity: 0.5, width: compact ? "10rem" : "15rem" }}
-          whileInView={{ opacity: 1, width: compact ? "22rem" : "30rem" }}
+          initial={{ opacity: 0.5, width: compact ? "9rem" : "15rem" }}
+          whileInView={{ opacity: 1, width: compact ? "18rem" : "30rem" }}
           transition={{ delay: 0.3, duration: 0.8, ease: "easeInOut" }}
           style={{ backgroundImage: `conic-gradient(var(--conic-position), var(--tw-gradient-stops))` }}
-          className="absolute inset-auto right-1/2 h-56 w-[30rem] overflow-visible bg-gradient-conic from-cyan-500 via-transparent to-transparent text-white [--conic-position:from_70deg_at_center_top]"
+          className="absolute inset-auto right-1/2 h-48 w-[30rem] overflow-visible bg-gradient-conic from-indigo-500 via-transparent to-transparent text-white [--conic-position:from_70deg_at_center_top]"
         >
-          <div className={cn("absolute bottom-0 left-0 z-20 h-40 w-[100%]", pageBg, "[mask-image:linear-gradient(to_top,white,transparent)]")} />
-          <div className={cn("absolute bottom-0 left-0 z-20 h-[100%] w-40", pageBg, "[mask-image:linear-gradient(to_right,white,transparent)]")} />
+          <div className={cn("absolute bottom-0 left-0 z-20 h-36 w-[100%]", pageBg, "[mask-image:linear-gradient(to_top,white,transparent)]")} />
+          <div className={cn("absolute bottom-0 left-0 z-20 h-[100%] w-32", pageBg, "[mask-image:linear-gradient(to_right,white,transparent)]")} />
         </motion.div>
+        {/* Rechts Konus: transparent -> sky */}
         <motion.div
-          initial={{ opacity: 0.5, width: compact ? "10rem" : "15rem" }}
-          whileInView={{ opacity: 1, width: compact ? "22rem" : "30rem" }}
+          initial={{ opacity: 0.5, width: compact ? "9rem" : "15rem" }}
+          whileInView={{ opacity: 1, width: compact ? "18rem" : "30rem" }}
           transition={{ delay: 0.3, duration: 0.8, ease: "easeInOut" }}
           style={{ backgroundImage: `conic-gradient(var(--conic-position), var(--tw-gradient-stops))` }}
-          className="absolute inset-auto left-1/2 h-56 w-[30rem] bg-gradient-conic from-transparent via-transparent to-cyan-500 text-white [--conic-position:from_290deg_at_center_top]"
+          className="absolute inset-auto left-1/2 h-48 w-[30rem] bg-gradient-conic from-transparent via-transparent to-sky-500 text-white [--conic-position:from_290deg_at_center_top]"
         >
-          <div className={cn("absolute bottom-0 right-0 z-20 h-[100%] w-40", pageBg, "[mask-image:linear-gradient(to_left,white,transparent)]")} />
-          <div className={cn("absolute bottom-0 right-0 z-20 h-40 w-[100%]", pageBg, "[mask-image:linear-gradient(to_top,white,transparent)]")} />
+          <div className={cn("absolute bottom-0 right-0 z-20 h-[100%] w-32", pageBg, "[mask-image:linear-gradient(to_left,white,transparent)]")} />
+          <div className={cn("absolute bottom-0 right-0 z-20 h-36 w-[100%]", pageBg, "[mask-image:linear-gradient(to_top,white,transparent)]")} />
         </motion.div>
-        <div className={cn("absolute top-1/2 h-48 w-full blur-2xl", pageBg, topBlurTranslate)}></div>
-        <div className="absolute top-1/2 z-50 h-48 w-full bg-transparent opacity-10 backdrop-blur-md"></div>
-        <div className={cn("absolute inset-auto z-50 rounded-full bg-cyan-500 opacity-50 blur-3xl", haloSize, "-translate-y-1/2")}></div>
+        {/* Aufwärts-Blur für natürlichen Glow */}
+        <div className={cn("absolute top-1/2 h-40 w-full blur-2xl", pageBg, topBlurTranslate)}></div>
+        <div className="absolute top-1/2 z-50 h-36 w-full bg-transparent opacity-10 backdrop-blur-md"></div>
+        <div className={cn("absolute inset-auto z-50 rounded-full bg-sky-500 opacity-40 blur-3xl", haloSize, "-translate-y-1/2")}></div>
         <motion.div
           initial={{ width: compact ? "6rem" : "8rem" }}
-          whileInView={{ width: compact ? "12rem" : "16rem" }}
+          whileInView={{ width: compact ? "11rem" : "16rem" }}
           transition={{ delay: 0.3, duration: 0.8, ease: "easeInOut" }}
-          className={cn("absolute inset-auto z-30 h-36 w-64 rounded-full bg-cyan-400 blur-2xl", glowTranslate)}
+          className={cn("absolute inset-auto z-30 h-28 w-56 rounded-full bg-indigo-400/80 blur-2xl", glowTranslate)}
         ></motion.div>
         {showLine && (
           <motion.div
             initial={{ width: compact ? "10rem" : "15rem" }}
-            whileInView={{ width: compact ? "22rem" : "30rem" }}
+            whileInView={{ width: compact ? "20rem" : "30rem" }}
             transition={{ delay: 0.3, duration: 0.8, ease: "easeInOut" }}
-            className={cn("absolute inset-auto z-50 h-0.5 w-[30rem] bg-cyan-400", lineTranslate)}
+            className={cn(
+              "absolute inset-auto z-50 h-[3px] w-[30rem] rounded-full bg-sky-300/80 blur-[1.5px]",
+              lineTranslate
+            )}
           ></motion.div>
         )}
+        {/* Abdeckung oben, damit nichts hart endet */}
         <div
           className={cn(
-            "absolute inset-auto z-40 h-44 w-full",
+            "absolute inset-auto z-40 h-36 w-full",
             pageBg,
-            compact ? "-translate-y-[9.5rem]" : "-translate-y-[12.5rem]"
+            compact ? "-translate-y-[7rem]" : "-translate-y-[12.5rem]"
           )}
         ></div>
       </div>

@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiMenu, FiX } from "react-icons/fi";
+import { FaTiktok, FaInstagram } from "react-icons/fa6";
 import Image from "next/image";
 
 interface NavItem {
@@ -13,7 +14,7 @@ const NAV_ITEMS: NavItem[] = [
     { label: "Home", href: "#home" },
     { label: "Services", href: "#services" },
     { label: "FAQ", href: "#faq" },
-    { label: "Contact", href: "#contact" },
+    { label: "Kontakt", href: "#contact" },
 ];
 
 
@@ -150,6 +151,14 @@ export default function Navbar() {
                                     </li>
                                 ))}
                             </ul>
+                            <div className="flex items-center justify-end gap-3 px-5 pb-4 text-xl text-slate-200">
+                                <a href="https://tiktok.com" target="_blank" rel="noreferrer" aria-label="TikTok" className="hover:text-white">
+                                    <FaTiktok />
+                                </a>
+                                <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram" className="hover:text-white">
+                                    <FaInstagram />
+                                </a>
+                            </div>
                         </div>
                     </motion.div>
                 )}

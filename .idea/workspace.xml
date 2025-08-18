@@ -4,14 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="383251e0-1204-4eda-9a90-c946c4eaf448" name="Changes" comment="&quot;fresh project&quot;">
-      <change afterPath="$PROJECT_DIR$/public/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/components/Navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
+    <list default="true" id="383251e0-1204-4eda-9a90-c946c4eaf448" name="Changes" comment="&quot;agentur website fast fertig&quot;">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/FAQ.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/FAQ.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Hero.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Services.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Services.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/ui/lamp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/ui/lamp.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +80,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1755518021124</updated>
-      <workItem from="1755518022171" duration="7309000" />
+      <workItem from="1755518022171" duration="9630000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;fresh project&quot;">
       <option name="closed" value="true" />
@@ -88,7 +90,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755518103980</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="&quot;agentur website fast fertig&quot;">
+      <option name="closed" value="true" />
+      <created>1755526988138</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1755526988138</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -96,7 +106,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&quot;fresh project&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;fresh project&quot;" />
+    <MESSAGE value="&quot;agentur website fast fertig&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;agentur website fast fertig&quot;" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

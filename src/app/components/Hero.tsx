@@ -3,6 +3,7 @@ import React, { useLayoutEffect, useRef } from 'react'
 import { Button } from '@/app/components/Button'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import gsap from 'gsap'
+import { TypewriterRotateSmooth } from '@/app/components/Typewriter'
 
 export default function Hero() {
 	const containerRef = useRef<HTMLDivElement | null>(null)
@@ -28,8 +29,6 @@ export default function Hero() {
 	const upperBgTranslateY = useTransform(scrollYProgress, [0, 1], [0, 40])
 	const lowerBgTranslateY = useTransform(scrollYProgress, [0, 1], [0, -40])
 
-	const typedText = 'Mehr Sichtbarkeit. Mehr Umsatz. Mehr Zeit fürs Wesentliche.'
-
 	return (
 		<section id="home" ref={containerRef} className="relative isolate overflow-hidden pt-28 pb-24 md:pt-36 md:pb-32">
 			<motion.div style={{ y: titleTranslateY }}>
@@ -42,28 +41,31 @@ export default function Hero() {
 						className="text-4xl font-extrabold tracking-tight text-slate-100 sm:text-6xl"
 					>
 						<span className="block hero-line">Willkommen bei</span>
-						<span className="mt-2 block bg-gradient-to-r from-indigo-400 via-sky-400 to-violet-400 bg-clip-text text-transparent hero-line">
+						<span className="mt-2 block bg-gradient-to-r from-indigo-400 via-sky-400 to-violet-400 bg-clip-text text-indigo-400 hero-line">
 							PixelProfession
 						</span>
 					</motion.h1>
-					<p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-slate-300 hero-line">
-						Wir bauen moderne Websites und Shopify-Shops – schnell, individuell und fokussiert auf Ihr Business.
-					</p>
-					<div className="mt-4 flex justify-center">
-						<p className="font-mono text-slate-200/90 text-sm sm:text-base whitespace-pre">
-							{typedText.split('').map((char, i) => (
-								<motion.span key={i} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.9 + i * 0.03, duration: 0.02 }}>
-									{char}
-								</motion.span>
-							))}
-							<span className="hero-caret">|</span>
-						</p>
+					<div className="mt-6 flex justify-center">
+						<motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.6, delay: 0.6 }}>
+							<TypewriterRotateSmooth
+								words={[
+
+									{ text: 'Seriöses Auftreten für dein Unternehmen.' },
+									{ text: 'Professionelles Design abgestimmt auf deinen Wunsch.' },
+									{ text: 'Fokussiert auf dein Business.' },
+									{ text: 'Suchmaschinenoptimiert für mehr Sichtbarkeit.' },
+								]}
+								typingMs={70}
+								deletingMs={100}
+								pauseMs={1000}
+							/>
+						</motion.div>
 					</div>
 					<div className="mt-10 flex items-center justify-center gap-4 hero-cta">
-						<Button as="a" href="#services" foreground="primary" background="default">
+						<Button as="a" href="#services" foreground="primary" background="default" className="text-white">
 							Unsere Services
 						</Button>
-						<Button as="a" href="#contact" isGhost foreground="primary">
+						<Button as="a" href="#contact" isGhost foreground="primary" className="text-white">
 							Kontakt aufnehmen
 						</Button>
 					</div>
@@ -73,13 +75,7 @@ export default function Hero() {
 				<motion.div style={{ y: upperBgTranslateY }} className="absolute -top-24 left-1/2 h-64 w-[48rem] -translate-x-1/2 rounded-full bg-indigo-600 blur-[120px]" />
 				<motion.div style={{ y: lowerBgTranslateY }} className="absolute bottom-0 left-1/2 h-72 w-[40rem] -translate-x-1/2 rounded-full bg-sky-600 blur-[120px]" />
 			</div>
-			{/* Unterer Farb-Fade für weichen Abschluss */}
 			<div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-[#0b1220]" />
-
-			<style jsx>{`
-				@keyframes blink { 0%, 49% { opacity: 1 } 50%, 100% { opacity: 0 } }
-				.hero-caret { display: inline-block; width: 1ch; color: #94a3b8; animation: blink 1s step-end infinite }
-			`}</style>
 		</section>
 	)
 }

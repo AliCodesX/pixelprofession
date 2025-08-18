@@ -6,14 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="383251e0-1204-4eda-9a90-c946c4eaf448" name="Changes" comment="&quot;agentur website fast fertig&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/FAQ.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/FAQ.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Hero.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Services.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Services.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/ui/lamp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/ui/lamp.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Contact.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Contact.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,21 +16,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "AliCodesX"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;AliCodesX&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "git@github.com:AliCodesX/pixelprofession.git",
-    "accountId": "56ba6658-0dab-4ca7-a0dd-f3c44bb4a496"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:AliCodesX/pixelprofession.git&quot;,
+    &quot;accountId&quot;: &quot;56ba6658-0dab-4ca7-a0dd-f3c44bb4a496&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="31SWazmQbjUWsR32ejmxoDbudye" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -47,7 +40,10 @@
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
+    "js.debugger.nextJs.config.created.client": "true",
+    "js.debugger.nextJs.config.created.server": "true",
     "junie.onboarding.icon.badge.shown": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -65,6 +61,21 @@
       <recent name="$PROJECT_DIR$/public" />
     </key>
   </component>
+  <component name="RunManager" selected="npm.Next.js: server-side">
+    <configuration name="Next.js: debug client-side" type="JavascriptDebugType" uri="http://localhost:3000/">
+      <method v="2" />
+    </configuration>
+    <configuration name="Next.js: server-side" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -80,7 +91,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1755518021124</updated>
-      <workItem from="1755518022171" duration="9630000" />
+      <workItem from="1755518022171" duration="10495000" />
+      <workItem from="1755531022882" duration="277000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;fresh project&quot;">
       <option name="closed" value="true" />
@@ -98,7 +110,23 @@
       <option name="project" value="LOCAL" />
       <updated>1755526988138</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="&quot;agentur website fast fertig&quot;">
+      <option name="closed" value="true" />
+      <created>1755530332448</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1755530332448</updated>
+    </task>
+    <task id="LOCAL-00004" summary="&quot;agentur website fast fertig&quot;">
+      <option name="closed" value="true" />
+      <created>1755530398859</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1755530398859</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
